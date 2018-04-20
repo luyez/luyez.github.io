@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0060)https://www.jsform.com/web/formview/5ad9d655bb7c7c025c40458b -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="feedback">
+<title>feedback</title>
+
+<link type="text/css" rel="stylesheet" href="css/formview.css">
+<link type="text/css" rel="stylesheet" href="css/default.css">
+<style type="text/css">
+body{
+color:#222;
+font-size:0.8em;
+letter-spacing:0.05em;
+font-family:"Verdana","微软雅黑","宋体","Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+padding-bottom: 15px;
+padding-top: 17px;
+text-align:center;
+}
+.overlay{
+background-color:#111;
+height: 100%;
+opacity: 0.9;
+position: fixed;
+_position:absolute;
+top:0;
+width: 100%;
+z-index: 8000;
+cursor:pointer;
+}
+.lightbox{
+left: 50%;
+position: fixed;
+_position: absolute;
+text-align: left;
+top: 50%;
+width: 820px;
+margin-left:-410px;
+margin-top:-210px;
+background: none repeat scroll 0 0 #ECF0F1;
+z-index: 9999;
+}
+.lbcontent{
+background: none repeat scroll 0 0 #FFFFFF;
+padding: 25px 30px;
+}
+.overlay.alert{opacity: 0.9;}
+.lightbox.alert{width: 300px;margin-left:-150px;border-radius:0px;border-color: #D4B240;}
+.lbcontent.alert{border-radius: 0px;margin:0px;text-align: center;}
+.msg-alert{text-align: left;margin-bottom: 15px;}
+
+.info{
+padding-bottom:25px;
+border-bottom: 1px solid #CCCCCC;
+}
+.info h2 {
+    color: #222222;
+    font-size: 160%;
+    font-weight: normal;
+    line-height: 135%;
+    margin: 0 1em;
+    padding: 50px 0px;
+}
+.info h3 {
+    color: #222222;
+    font-size: 130%;
+    font-weight: normal;
+    line-height: 135%;
+    margin: 0 1em;
+    padding: 10px 0px;
+}
+.power{
+color: #2489ce;
+text-decoration: underline;
+}
+.pay {
+    display: inline-block;
+    width: 160px;
+    height: 60px;
+}
+.a-pay {
+    padding:3px 0px;
+    border:2px solid transparent;
+    display: block;
+    text-decoration: none;
+    color:#222;
+    font-size: 140%;
+    width:136px;
+    height: 36px;
+    text-align: center;
+    background: url(/rs/images/zhifu.png) no-repeat;
+    }
+.ali-pay {
+    background-position: 49% 63.4%;
+}
+.wx-pay {
+    background-position: 49% 8.6%;
+}
+.a-pay label{display: block;}
+
+.div-qrcode img{
+border:none;
+width:160px;
+height: 160px;
+}
+.div-qrcode h2{font-weight: normal;font-size: 140%;}
+
+
+#ulBanks {float:left;}
+#ulBanks li{float:left;margin: 2px 8px;}
+#ulBanks li label{cursor: pointer;}
+#ulBanks li span{
+display:inline-block;
+width:124px;height:36px; border:1px solid #ccc;
+background-image:url("/rs/css/images/combo.jpg");
+background-repeat:no-repeat;
+}
+.CMB-DEBIT span{background-position: 0px -683px;}
+.CCB-DEBIT span{background-position: 0px -430px;}
+.ICBC-DEBIT span{background-position: 0px -1582px;}
+.COMM-DEBIT span{background-position: 0px -757px;}
+.GDB-DEBIT span{background-position: 0px -1188px;}
+.BOC-DEBIT span{background-position: 0px -213px;}
+.CEB-DEBIT span{background-position: 0px -539px;}
+.SPDB-DEBIT span{background-position: 0px -2376px;}
+.PSBC-DEBIT span{background-position: 0px -2052px;}
+.BJBANK span{background-position: 0px -144px;}
+.SHRCB span{background-position: 0px -2270px;}
+.WZCBB2C-DEBIT span{background-position: 0px -2555px;}
+.COMM span{background-position: 0px -683px;}
+.CMBC span{background-position: 0px -720px;}
+.BJRCB span{background-position: 0px -181px;}
+.SPA-DEBIT span{background-position: 0px -2341px;}
+.CITIC-DEBIT span{background-position: 0px -609px;}
+.ABC span{background-position: 0px -0px;}	
+.CIB span{background-position: 0px -576px;}
+.HZCBB2C span{background-position: 0px -1543px;}
+.SHBANK span{background-position: 0px -2231px;}
+
+#ulBanks li label>input{vertical-align: 12px;}
+.btn{
+position:relative;
+display:inline-block;
+color:#fff;
+border-radius:3px;
+background-color:#bdc3c7;
+padding:4px 12px 4px 12px;
+margin:20px 5px;
+line-height: 150%;
+cursor: pointer;
+text-decoration: none;
+}
+.btn-blue{background-color: #2596e6;}
+.btn-blue:hover{background-color:#5dade2;}
+
+</style>
+<script src="js/hm.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+</head>
+<body class="wallpaper">
+
+<div id="container" class="container">
+<h1 id="logo" class="logo"><a></a></h1>
+<div class="info" id="formHeader"><h2>提交</h2>
+
+</div>
+</div>
+
+<div id="overlay" class="overlay hide"></div>
+<div id="lightBox" class="lightbox hide">
+<div id="lbContent" class="lbcontent clearfix">
+
+</div>
+</div>
+<script type="text/javascript" src="js/head.load.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+         $.ajax({
+                url: 'https://pushbear.ftqq.com/sub?sendkey=3360-adac85d2687a1f43177b445d7f36fe91&text=TEST12',
+                dataType: 'json',
+                method: 'GET',
+                success: function(data) {
+					 //alert('error:' + JSON.stringify(data));
+					 //alert(data.code);
+                    if (data.code==0) {
+                        //$('.box').html('');
+
+						//alert("132");
+						$("#formHeader").html("<h2>提交成功</h2>");
+                    }
+                },
+                error: function(xhr) {
+                    // 导致出错的原因较多，以后再研究
+                    alert('error:' + JSON.stringify(xhr));
+                }
+            })
+            .done(function(data) {
+                // 请求成功后要做的工作
+                console.log('success');
+            })
+            .fail(function() {
+                // 请求失败后要做的工作
+                console.log('error');
+            })
+            .always(function() {
+                // 不管成功或失败都要做的工作
+                console.log('complete');
+            });
+
+});
+
+
+
+
+   
+</script>
+
+
+</body>
+</html>
